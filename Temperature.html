@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Tem =Temperature
+    var Tem = function (C, F, Kenvin) {
+        this.C = C;
+        this.F = F;
+        this.Kenvin = Kenvin;
+        //get
+        this.getC = function () {
+            return this.C;
+        }
+        this.getF = function () {
+            return this.F;
+        }
+        this.getKenvin = function () {
+            return this.Kenvin;
+        }
+        //set
+        this.setC = function (C) {
+            this.C = C;
+        }
+        this.setF = function (F) {
+            this.F = F;
+        }
+        this.setKenvin = function (Kenvin) {
+            this.Kenvin = Kenvin;
+        }
+        //chuyen do C sang do F =100
+        this.CtoF = function (C) {
+            this.C = C;
+            return this.C * 100;
+        }
+        //C sang K = 1000
+        this.CtoK = function (C) {
+            this.C = C;
+            return this.C * 1000;
+        }
+    }
+    var tem = new Tem(25, 0, 0)
+    var sangF = tem.CtoF(25);
+    var sangK = tem.CtoK(25);
+    alert(sangF);
+    alert(sangK);
+</script>
+</body>
+</html>
